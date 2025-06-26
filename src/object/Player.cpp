@@ -103,3 +103,10 @@ void Player::draw(SDL_Renderer *renderer)
         b.draw(renderer);
     }
 }
+
+void Player::removeDeadBullets()
+{
+    bullets.erase(std::remove_if(bullets.begin(), bullets.end(),
+                                 [](const Bullet &b) { return b.isDead(); }),
+                  bullets.end());
+}
