@@ -1,0 +1,3 @@
+/home/yuto/sourse/STG_with_GPT/build/CMakeFiles/STG.dir
+/home/yuto/sourse/STG_with_GPT/build/CMakeFiles/edit_cache.dir
+/home/yuto/sourse/STG_with_GPT/build/CMakeFiles/rebuild_cache.dir
