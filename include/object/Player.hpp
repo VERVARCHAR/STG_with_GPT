@@ -27,6 +27,9 @@ public:
     bool isDead() const { return lives <= 0; }
     bool isInvincible() const { return invincible; }
     int getLives() const { return lives; }
+    bool isBombing() const { return bombActive; }
+    int getBombs() const { return bombs; }
+    void useBomb();
 
     void removeDeadBullets();
 
@@ -41,4 +44,10 @@ private:
     std::vector<Bullet> bullets;
     bool isShooting = false;
     int shootCooldown = 0;
+
+    // bomb (spell card) related
+    int bombs = 3;
+    bool bombActive = false;
+    int bombTimer = 0;
+    bool bombKeyPrev = false;
 };

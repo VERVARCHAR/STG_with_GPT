@@ -35,6 +35,11 @@ void GameScene::update()
     player.handleInput(keyState);
     player.update();
 
+    if (player.isBombing())
+    {
+        enemyBullets.clear();
+    }
+
     // 最初の1回だけステージを読み込む
     if (frameCounter == 0)
     {
@@ -128,6 +133,12 @@ void GameScene::draw(SDL_Renderer *renderer)
         e.draw(renderer);
     for (auto &b : enemyBullets)
         b.draw(renderer);
+    if (player.isBombing())
+    {
+        SDL_SetRenderDrawColor(renderer, 0, 0, 255, 100);
+        SDL_Rect overlay = {0, 0, 640, 480};
+        SDL_RenderFillRect(renderer, &overlay);
+    }
     player.draw(renderer);
 
     if (player.isDead())
@@ -144,6 +155,7 @@ void GameScene::draw(SDL_Renderer *renderer)
     drawText(renderer, font, "LIVES: " + std::to_string(player.getLives()), 10, 10);
     drawText(renderer, font,
              "SCORE: " + std::to_string(ScoreManager::getInstance().getScore()), 10, 30);
+    drawText(renderer, font, "BOMBS: " + std::to_string(player.getBombs()), 10, 50);
 
     // あとで "SCORE: 000000", "POWER: ★★" なども追加可能
 }

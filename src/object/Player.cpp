@@ -7,12 +7,20 @@ Player::Player()
     y = 400;
     speed = 4.0f;
     slowSpeed = 2.0f;
+    bombs = 3;
 }
 
 void Player::handleInput(const Uint8 *keyState)
 {
     isSlow = keyState[SDL_SCANCODE_LSHIFT];
     isShooting = keyState[SDL_SCANCODE_Z];
+
+    bool bombPressed = keyState[SDL_SCANCODE_X];
+    if (bombPressed && !bombKeyPrev)
+    {
+        useBomb();
+    }
+    bombKeyPrev = bombPressed;
 
     float moveSpeed = isSlow ? slowSpeed : speed;
 
@@ -49,6 +57,15 @@ void Player::onHit()
 
 void Player::update()
 {
+    if (bombActive)
+    {
+        bombTimer--;
+        if (bombTimer <= 0)
+        {
+            bombActive = false;
+        }
+    }
+
     // 無敵時間処理
     if (invincible)
     {
@@ -107,7 +124,19 @@ void Player::draw(SDL_Renderer *renderer)
 void Player::removeDeadBullets()
 {
     bullets.erase(std::remove_if(bullets.begin(), bullets.end(),
+                 bullets.end());
+}
 
+void Player::useBomb()
+{
+    if (bombs <= 0 || bombActive)
+        return;
+
+    bombs--;
+    bombActive = true;
+    bombTimer = 60;        // bomb effect duration
+    invincible = true;
+    invincibleTimer = 120; // extra invincibility
                                  [](const Bullet &b)
                                  { return b.isDead(); }),
                   bullets.end());
