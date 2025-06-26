@@ -1,5 +1,6 @@
 #include "scene/GameScene.hpp"
 #include <SDL2/SDL.h>
+#include "system/ScoreManager.hpp"
 
 void drawText(SDL_Renderer *renderer, TTF_Font *font, const std::string &text, int x, int y)
 {
@@ -24,6 +25,8 @@ GameScene::GameScene()
     {
         SDL_Log("Failed to load font: %s", TTF_GetError());
     }
+
+    ScoreManager::getInstance().reset();
 }
 
 void GameScene::update()
@@ -31,6 +34,11 @@ void GameScene::update()
     const Uint8 *keyState = SDL_GetKeyboardState(NULL);
     player.handleInput(keyState);
     player.update();
+
+    if (player.isBombing())
+    {
+        enemyBullets.clear();
+    }
 
     // 最初の1回だけステージを読み込む
     if (frameCounter == 0)
@@ -54,7 +62,7 @@ void GameScene::update()
     }
 
     // 当たり判定：playerの弾 vs 敵
-    const auto &bullets = player.getBullets();
+    auto &bullets = player.getBullets();
 
     for (auto &e : enemies)
     {
@@ -88,7 +96,7 @@ void GameScene::update()
                 bullet.setDead(); // 弾を無効化
                 if (enemy.isDead())
                 {
-                    score += 1000; // スコア加算
+                    ScoreManager::getInstance().addScore(1000);
                 }
             }
         }
@@ -125,6 +133,12 @@ void GameScene::draw(SDL_Renderer *renderer)
         e.draw(renderer);
     for (auto &b : enemyBullets)
         b.draw(renderer);
+    if (player.isBombing())
+    {
+        SDL_SetRenderDrawColor(renderer, 0, 0, 255, 100);
+        SDL_Rect overlay = {0, 0, 640, 480};
+        SDL_RenderFillRect(renderer, &overlay);
+    }
     player.draw(renderer);
 
     if (player.isDead())
@@ -132,11 +146,16 @@ void GameScene::draw(SDL_Renderer *renderer)
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 200);
         SDL_Rect overlay = {0, 0, 640, 480};
         SDL_RenderFillRect(renderer, &overlay);
-        // 本当はフォントで Game Over 表示したい！（後で実装）
+        drawText(renderer, font, "GAME OVER", 260, 220);
+        drawText(renderer, font,
+                 "FINAL SCORE: " + std::to_string(ScoreManager::getInstance().getScore()),
+                 200, 260);
     }
 
     drawText(renderer, font, "LIVES: " + std::to_string(player.getLives()), 10, 10);
-    drawText(renderer, font, "SCORE: " + std::to_string(score), 10, 30);
+    drawText(renderer, font,
+             "SCORE: " + std::to_string(ScoreManager::getInstance().getScore()), 10, 30);
+    drawText(renderer, font, "BOMBS: " + std::to_string(player.getBombs()), 10, 50);
 
     // あとで "SCORE: 000000", "POWER: ★★" なども追加可能
 }

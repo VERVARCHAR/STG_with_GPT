@@ -15,6 +15,10 @@ public:
     bool checkCollision(float bulletX, float bulletY, float radius);
 
     bool isDead() const { return dead; }
+    void onHit();
+    float getX() const { return x; }
+    float getY() const { return y; }
+    float getRadius() const { return size; }
 
     std::vector<EnemyBullet> bullets;
     int fireCooldown = 60;

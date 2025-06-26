@@ -18,3 +18,13 @@ bool Bullet::isOffScreen() const
 {
     return y + radius < 0;
 }
+
+void Bullet::setDead()
+{
+    dead = true;
+}
+
+bool Bullet::isDead() const
+{
+    return dead;
+}
