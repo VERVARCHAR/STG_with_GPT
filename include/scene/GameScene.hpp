@@ -22,8 +22,6 @@ public:
     float playerX() const { return player.getX(); }
     float playerY() const { return player.getY(); }
     std::vector<EnemyBullet> enemyBullets;
-    bool playerDead = false;
-    int score = 0;
 
 private:
     Player player;

@@ -62,6 +62,11 @@ bool Enemy::checkCollision(float bulletX, float bulletY, float radius)
     return false;
 }
 
+void Enemy::onHit()
+{
+    dead = true;
+}
+
 std::optional<EnemyBullet> Enemy::tryFire(float playerX, float playerY)
 {
     if (fireCooldown <= 0)

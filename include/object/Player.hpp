@@ -11,6 +11,7 @@ public:
     void handleInput(const Uint8 *keyState);
     void update();
     void draw(SDL_Renderer *renderer);
+    std::vector<Bullet> &getBullets() { return bullets; }
     const std::vector<Bullet> &getBullets() const { return bullets; }
     float getX() const { return x; }
     float getY() const { return y; }
@@ -26,6 +27,8 @@ public:
     bool isDead() const { return lives <= 0; }
     bool isInvincible() const { return invincible; }
     int getLives() const { return lives; }
+
+    void removeDeadBullets();
 
 private:
     float x,
