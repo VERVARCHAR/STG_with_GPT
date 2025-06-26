@@ -27,6 +27,8 @@ public:
     bool isInvincible() const { return invincible; }
     int getLives() const { return lives; }
 
+    void removeDeadBullets();
+
 private:
     float x,
         y;
