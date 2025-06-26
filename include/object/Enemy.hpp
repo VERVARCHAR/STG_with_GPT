@@ -5,6 +5,10 @@
 #include <vector>
 #include <algorithm>
 #include <optional>
+#include "object/EnemyBullet.hpp"
+#include "pattern/StraightShotPattern.hpp"
+
+class BulletPattern; // 前方宣言
 
 class Enemy
 {
@@ -31,7 +35,7 @@ public:
 
     const std::vector<EnemyBullet> &getBullets() const { return bullets; }
 
-    std::optional<EnemyBullet> tryFire(float playerX, float playerY);
+    std::optional<EnemyBullet> tryFire(float playerX, float playerY, int frame);
 
     void onBombHit(float centerX, float centerY, float radius); // 範囲付きボム処理
 
@@ -50,4 +54,6 @@ private:
     std::string type;
     std::string pattern;
     nlohmann::json params;
+
+    std::unique_ptr<BulletPattern> bulletPattern; // 弾幕
 };

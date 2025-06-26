@@ -1,5 +1,6 @@
 #include "object/Enemy.hpp"
 #include <cmath>
+#include <iostream>
 
 Enemy::Enemy(const EnemySpawnData &data)
 {
@@ -12,6 +13,16 @@ Enemy::Enemy(const EnemySpawnData &data)
     type = data.type;
     pattern = data.pattern;
     params = data.params;
+
+    // 弾幕の初期化（pattern文字列に応じて）
+    std::string bulletType = params.value("bullet_pattern", "straight");
+    if (bulletType == "straight")
+    {
+        bulletPattern = std::make_unique<StraightShotPattern>(params);
+    }
+    std::cout << "[DEBUG] Enemy created: type=" << type
+              << " pattern=" << pattern
+              << " bullet_pattern=" << params.value("bullet_pattern", "none") << std::endl;
 }
 
 void Enemy::update(float playerX, float playerY)
@@ -94,27 +105,7 @@ void Enemy::onHit()
     dead = true;
 }
 
-std::optional<EnemyBullet> Enemy::tryFire(float playerX, float playerY)
-{
-    if (fireCooldown <= 0)
-    {
-        float dx = playerX - x;
-        float dy = playerY - y;
-        float len = std::sqrt(dx * dx + dy * dy);
-        if (len != 0)
-        {
-            dx /= len;
-            dy /= len;
-        }
-        fireCooldown = 60;
-        return EnemyBullet(x, y, dx, dy);
-    }
-    else
-    {
-        fireCooldown--;
-        return std::nullopt;
-    }
-}
+std::optional<EnemyBullet> tryFire(float playerX, float playerY, int frame);
 
 void Enemy::onBombHit(float centerX, float centerY, float radius)
 {
@@ -149,4 +140,13 @@ void Enemy::takeDamage(int dmg)
 void Enemy::kill()
 {
     dead = true;
+}
+
+std::optional<EnemyBullet> Enemy::tryFire(float playerX, float playerY, int frame)
+{
+    if (bulletPattern)
+    {
+        return bulletPattern->tryFire(x, y, playerX, playerY, frame);
+    }
+    return std::nullopt;
 }

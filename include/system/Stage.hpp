@@ -1,3 +1,4 @@
+// include/system/Stage.hpp
 #pragma once
 #include <string>
 #include <vector>
@@ -19,7 +20,7 @@ struct EnemySpawnData
 class Stage
 {
 public:
-    void loadFromFile(const std::string &filename);
+    bool loadFromFile(const std::string &filename);
     const std::vector<EnemySpawnData> &getSpawnList() const;
 
 private:

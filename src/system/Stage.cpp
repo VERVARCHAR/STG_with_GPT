@@ -1,20 +1,22 @@
 // src/system/Stage.cpp
 #include "system/Stage.hpp"
 #include <fstream>
-#include <stdexcept>
+#include <iostream>
 
 using json = nlohmann::json;
 
-void Stage::loadFromFile(const std::string &filename)
+bool Stage::loadFromFile(const std::string &filepath)
 {
-    std::ifstream file(filename);
-    if (!file)
+    std::ifstream file(filepath);
+    if (!file.is_open())
     {
-        throw std::runtime_error("Could not open stage file: " + filename);
+        std::cerr << "Failed to open stage file: " << filepath << "\n";
+        return false;
     }
 
     json data;
     file >> data;
+
     spawnList.clear();
 
     for (const auto &e : data["enemies"])
@@ -40,6 +42,9 @@ void Stage::loadFromFile(const std::string &filename)
 
         spawnList.push_back(enemy);
     }
+    std::cout << "[DEBUG] stage loaded. enemy count: " << spawnList.size() << std::endl;
+
+    return true;
 }
 
 const std::vector<EnemySpawnData> &Stage::getSpawnList() const

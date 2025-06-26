@@ -139,10 +139,24 @@ CMakeFiles/STG.dir/src/object/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/STG.dir/src/object/Player.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuto/sourse/STG_with_GPT/src/object/Player.cpp -o CMakeFiles/STG.dir/src/object/Player.cpp.s
 
+CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.o: CMakeFiles/STG.dir/flags.make
+CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.o: ../src/pattern/StraightShotPattern.cpp
+CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.o: CMakeFiles/STG.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.o -MF CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.o.d -o CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.o -c /home/yuto/sourse/STG_with_GPT/src/pattern/StraightShotPattern.cpp
+
+CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuto/sourse/STG_with_GPT/src/pattern/StraightShotPattern.cpp > CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.i
+
+CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuto/sourse/STG_with_GPT/src/pattern/StraightShotPattern.cpp -o CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.s
+
 CMakeFiles/STG.dir/src/scene/GameScene.cpp.o: CMakeFiles/STG.dir/flags.make
 CMakeFiles/STG.dir/src/scene/GameScene.cpp.o: ../src/scene/GameScene.cpp
 CMakeFiles/STG.dir/src/scene/GameScene.cpp.o: CMakeFiles/STG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/STG.dir/src/scene/GameScene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/STG.dir/src/scene/GameScene.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STG.dir/src/scene/GameScene.cpp.o -MF CMakeFiles/STG.dir/src/scene/GameScene.cpp.o.d -o CMakeFiles/STG.dir/src/scene/GameScene.cpp.o -c /home/yuto/sourse/STG_with_GPT/src/scene/GameScene.cpp
 
 CMakeFiles/STG.dir/src/scene/GameScene.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/STG.dir/src/scene/GameScene.cpp.s: cmake_force
 CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o: CMakeFiles/STG.dir/flags.make
 CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o: ../src/scene/TitleScene.cpp
 CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o: CMakeFiles/STG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o -MF CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o.d -o CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o -c /home/yuto/sourse/STG_with_GPT/src/scene/TitleScene.cpp
 
 CMakeFiles/STG.dir/src/scene/TitleScene.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/STG.dir/src/scene/TitleScene.cpp.s: cmake_force
 CMakeFiles/STG.dir/src/system/Application.cpp.o: CMakeFiles/STG.dir/flags.make
 CMakeFiles/STG.dir/src/system/Application.cpp.o: ../src/system/Application.cpp
 CMakeFiles/STG.dir/src/system/Application.cpp.o: CMakeFiles/STG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/STG.dir/src/system/Application.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/STG.dir/src/system/Application.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STG.dir/src/system/Application.cpp.o -MF CMakeFiles/STG.dir/src/system/Application.cpp.o.d -o CMakeFiles/STG.dir/src/system/Application.cpp.o -c /home/yuto/sourse/STG_with_GPT/src/system/Application.cpp
 
 CMakeFiles/STG.dir/src/system/Application.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/STG.dir/src/system/Application.cpp.s: cmake_force
 CMakeFiles/STG.dir/src/system/SceneManager.cpp.o: CMakeFiles/STG.dir/flags.make
 CMakeFiles/STG.dir/src/system/SceneManager.cpp.o: ../src/system/SceneManager.cpp
 CMakeFiles/STG.dir/src/system/SceneManager.cpp.o: CMakeFiles/STG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/STG.dir/src/system/SceneManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/STG.dir/src/system/SceneManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STG.dir/src/system/SceneManager.cpp.o -MF CMakeFiles/STG.dir/src/system/SceneManager.cpp.o.d -o CMakeFiles/STG.dir/src/system/SceneManager.cpp.o -c /home/yuto/sourse/STG_with_GPT/src/system/SceneManager.cpp
 
 CMakeFiles/STG.dir/src/system/SceneManager.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/STG.dir/src/system/SceneManager.cpp.s: cmake_force
 CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o: CMakeFiles/STG.dir/flags.make
 CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o: ../src/system/ScoreManager.cpp
 CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o: CMakeFiles/STG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o -MF CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o.d -o CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o -c /home/yuto/sourse/STG_with_GPT/src/system/ScoreManager.cpp
 
 CMakeFiles/STG.dir/src/system/ScoreManager.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/STG.dir/src/system/ScoreManager.cpp.s: cmake_force
 CMakeFiles/STG.dir/src/system/Stage.cpp.o: CMakeFiles/STG.dir/flags.make
 CMakeFiles/STG.dir/src/system/Stage.cpp.o: ../src/system/Stage.cpp
 CMakeFiles/STG.dir/src/system/Stage.cpp.o: CMakeFiles/STG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/STG.dir/src/system/Stage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/STG.dir/src/system/Stage.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STG.dir/src/system/Stage.cpp.o -MF CMakeFiles/STG.dir/src/system/Stage.cpp.o.d -o CMakeFiles/STG.dir/src/system/Stage.cpp.o -c /home/yuto/sourse/STG_with_GPT/src/system/Stage.cpp
 
 CMakeFiles/STG.dir/src/system/Stage.cpp.i: cmake_force
@@ -223,20 +237,6 @@ CMakeFiles/STG.dir/src/system/Stage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/STG.dir/src/system/Stage.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuto/sourse/STG_with_GPT/src/system/Stage.cpp -o CMakeFiles/STG.dir/src/system/Stage.cpp.s
 
-CMakeFiles/STG.dir/src/system/StageLoader.cpp.o: CMakeFiles/STG.dir/flags.make
-CMakeFiles/STG.dir/src/system/StageLoader.cpp.o: ../src/system/StageLoader.cpp
-CMakeFiles/STG.dir/src/system/StageLoader.cpp.o: CMakeFiles/STG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/STG.dir/src/system/StageLoader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/STG.dir/src/system/StageLoader.cpp.o -MF CMakeFiles/STG.dir/src/system/StageLoader.cpp.o.d -o CMakeFiles/STG.dir/src/system/StageLoader.cpp.o -c /home/yuto/sourse/STG_with_GPT/src/system/StageLoader.cpp
-
-CMakeFiles/STG.dir/src/system/StageLoader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/STG.dir/src/system/StageLoader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yuto/sourse/STG_with_GPT/src/system/StageLoader.cpp > CMakeFiles/STG.dir/src/system/StageLoader.cpp.i
-
-CMakeFiles/STG.dir/src/system/StageLoader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/STG.dir/src/system/StageLoader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yuto/sourse/STG_with_GPT/src/system/StageLoader.cpp -o CMakeFiles/STG.dir/src/system/StageLoader.cpp.s
-
 # Object files for target STG
 STG_OBJECTS = \
 "CMakeFiles/STG.dir/src/main.cpp.o" \
@@ -244,13 +244,13 @@ STG_OBJECTS = \
 "CMakeFiles/STG.dir/src/object/Enemy.cpp.o" \
 "CMakeFiles/STG.dir/src/object/EnemyBullet.cpp.o" \
 "CMakeFiles/STG.dir/src/object/Player.cpp.o" \
+"CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.o" \
 "CMakeFiles/STG.dir/src/scene/GameScene.cpp.o" \
 "CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o" \
 "CMakeFiles/STG.dir/src/system/Application.cpp.o" \
 "CMakeFiles/STG.dir/src/system/SceneManager.cpp.o" \
 "CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o" \
-"CMakeFiles/STG.dir/src/system/Stage.cpp.o" \
-"CMakeFiles/STG.dir/src/system/StageLoader.cpp.o"
+"CMakeFiles/STG.dir/src/system/Stage.cpp.o"
 
 # External object files for target STG
 STG_EXTERNAL_OBJECTS =
@@ -260,13 +260,13 @@ STG: CMakeFiles/STG.dir/src/object/Bullet.cpp.o
 STG: CMakeFiles/STG.dir/src/object/Enemy.cpp.o
 STG: CMakeFiles/STG.dir/src/object/EnemyBullet.cpp.o
 STG: CMakeFiles/STG.dir/src/object/Player.cpp.o
+STG: CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.o
 STG: CMakeFiles/STG.dir/src/scene/GameScene.cpp.o
 STG: CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o
 STG: CMakeFiles/STG.dir/src/system/Application.cpp.o
 STG: CMakeFiles/STG.dir/src/system/SceneManager.cpp.o
 STG: CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o
 STG: CMakeFiles/STG.dir/src/system/Stage.cpp.o
-STG: CMakeFiles/STG.dir/src/system/StageLoader.cpp.o
 STG: CMakeFiles/STG.dir/build.make
 STG: CMakeFiles/STG.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable STG"

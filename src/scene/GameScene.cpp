@@ -4,6 +4,8 @@
 #include "system/ScoreManager.hpp"
 #include "system/Stage.hpp"
 
+using namespace std;
+
 const float BOMB_RADIUS = 150.0f;
 
 void drawText(SDL_Renderer *renderer, TTF_Font *font, const std::string &text, int x, int y)
@@ -67,7 +69,9 @@ void GameScene::update()
     const auto &spawns = stage.getSpawnList();
     while (nextSpawnIndex < spawns.size() && spawns[nextSpawnIndex].frame == frameCounter)
     {
-        enemies.emplace_back(spawns[nextSpawnIndex]); // OK！
+        std::cout << "[DEBUG] enemy spawning at frame " << frameCounter << std::endl;
+        enemies.emplace_back(spawns[nextSpawnIndex]);
+        nextSpawnIndex++;
     }
 
     frameCounter++;
@@ -76,9 +80,9 @@ void GameScene::update()
     {
         e.update(player.getX(), player.getY());
 
-        if (auto b = e.tryFire(player.getX(), player.getY()))
+        if (auto bullet = e.tryFire(player.getX(), player.getY(), frameCounter))
         {
-            enemyBullets.push_back(*b);
+            enemyBullets.push_back(*bullet);
         }
     }
 

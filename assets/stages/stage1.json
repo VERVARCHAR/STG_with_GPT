@@ -7,39 +7,13 @@
             "type": "fairy",
             "is_boss": false,
             "pattern": "sine",
-            "speed": 2.5,
+            "speed": 1.5,
             "angle": 90,
             "hp": 5,
             "params": {
-                "amplitude": 50,
-                "frequency": 0.05
-            }
-        },
-        {
-            "frame": 180,
-            "x": 100,
-            "y": -50,
-            "type": "fairy",
-            "is_boss": false,
-            "pattern": "straight",
-            "speed": 3.0,
-            "angle": 90,
-            "hp": 3,
-            "params": {}
-        },
-        {
-            "frame": 600,
-            "x": 320,
-            "y": -100,
-            "type": "midboss",
-            "is_boss": true,
-            "pattern": "stationary_then_shoot",
-            "speed": 1.0,
-            "angle": 90,
-            "hp": 200,
-            "params": {
-                "wait_duration": 120,
-                "shoot_interval": 60
+                "bullet_pattern": "straight",
+                "shoot_interval": 90,
+                "bullet_speed": 3.0
             }
         }
     ]

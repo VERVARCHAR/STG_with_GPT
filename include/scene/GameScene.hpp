@@ -3,8 +3,9 @@
 #include "object/Player.hpp"
 #include "object/Enemy.hpp"
 #include <vector>
+#include <iostream>
 
-#include "system/StageLoader.hpp"
+// #include "system/StageLoader.hpp"
 #include "object/EnemyBullet.hpp"
 #include "system/Stage.hpp" // ← ヘッダ冒頭に必要
 
@@ -18,7 +19,7 @@ public:
     void update() override;
     void draw(SDL_Renderer *renderer) override;
     int frameCounter = 0;
-    StageLoader stage;
+    // Stage stage;
     size_t nextSpawnIndex = 0;
     float playerX() const { return player.getX(); }
     float playerY() const { return player.getY(); }
@@ -28,9 +29,9 @@ private:
     TTF_Font *font = nullptr;
     Player player;
     std::vector<Enemy> enemies;
-    std::vector<EnemyBullet> enemyBullets;
-    int frameCounter = 0;
-    int nextSpawnIndex = 0;
+    // std::vector<EnemyBullet> enemyBullets;
+    // int frameCounter = 0;
+    // int nextSpawnIndex = 0;
 
     Stage stage; // ← これを追加！！！
 };

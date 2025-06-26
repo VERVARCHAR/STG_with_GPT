@@ -249,6 +249,30 @@ src/object/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/object/Player.cpp.s
 .PHONY : src/object/Player.cpp.s
 
+src/pattern/StraightShotPattern.o: src/pattern/StraightShotPattern.cpp.o
+.PHONY : src/pattern/StraightShotPattern.o
+
+# target to build an object file
+src/pattern/StraightShotPattern.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.o
+.PHONY : src/pattern/StraightShotPattern.cpp.o
+
+src/pattern/StraightShotPattern.i: src/pattern/StraightShotPattern.cpp.i
+.PHONY : src/pattern/StraightShotPattern.i
+
+# target to preprocess a source file
+src/pattern/StraightShotPattern.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.i
+.PHONY : src/pattern/StraightShotPattern.cpp.i
+
+src/pattern/StraightShotPattern.s: src/pattern/StraightShotPattern.cpp.s
+.PHONY : src/pattern/StraightShotPattern.s
+
+# target to generate assembly for a file
+src/pattern/StraightShotPattern.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/pattern/StraightShotPattern.cpp.s
+.PHONY : src/pattern/StraightShotPattern.cpp.s
+
 src/scene/GameScene.o: src/scene/GameScene.cpp.o
 .PHONY : src/scene/GameScene.o
 
@@ -393,30 +417,6 @@ src/system/Stage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/system/Stage.cpp.s
 .PHONY : src/system/Stage.cpp.s
 
-src/system/StageLoader.o: src/system/StageLoader.cpp.o
-.PHONY : src/system/StageLoader.o
-
-# target to build an object file
-src/system/StageLoader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/system/StageLoader.cpp.o
-.PHONY : src/system/StageLoader.cpp.o
-
-src/system/StageLoader.i: src/system/StageLoader.cpp.i
-.PHONY : src/system/StageLoader.i
-
-# target to preprocess a source file
-src/system/StageLoader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/system/StageLoader.cpp.i
-.PHONY : src/system/StageLoader.cpp.i
-
-src/system/StageLoader.s: src/system/StageLoader.cpp.s
-.PHONY : src/system/StageLoader.s
-
-# target to generate assembly for a file
-src/system/StageLoader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/system/StageLoader.cpp.s
-.PHONY : src/system/StageLoader.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -441,6 +441,9 @@ help:
 	@echo "... src/object/Player.o"
 	@echo "... src/object/Player.i"
 	@echo "... src/object/Player.s"
+	@echo "... src/pattern/StraightShotPattern.o"
+	@echo "... src/pattern/StraightShotPattern.i"
+	@echo "... src/pattern/StraightShotPattern.s"
 	@echo "... src/scene/GameScene.o"
 	@echo "... src/scene/GameScene.i"
 	@echo "... src/scene/GameScene.s"
@@ -459,9 +462,6 @@ help:
 	@echo "... src/system/Stage.o"
 	@echo "... src/system/Stage.i"
 	@echo "... src/system/Stage.s"
-	@echo "... src/system/StageLoader.o"
-	@echo "... src/system/StageLoader.i"
-	@echo "... src/system/StageLoader.s"
 .PHONY : help
 
 

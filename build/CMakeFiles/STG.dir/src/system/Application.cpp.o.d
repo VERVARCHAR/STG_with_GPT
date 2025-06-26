@@ -1,8 +1,7 @@
-CMakeFiles/STG.dir/src/scene/GameScene.cpp.o: \
- /home/yuto/sourse/STG_with_GPT/src/scene/GameScene.cpp \
+CMakeFiles/STG.dir/src/system/Application.cpp.o: \
+ /home/yuto/sourse/STG_with_GPT/src/system/Application.cpp \
  /usr/include/stdc-predef.h \
- /home/yuto/sourse/STG_with_GPT/include/scene/GameScene.hpp \
- /home/yuto/sourse/STG_with_GPT/include/scene/Scene.hpp \
+ /home/yuto/sourse/STG_with_GPT/include/system/Application.hpp \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -215,6 +214,10 @@ CMakeFiles/STG.dir/src/scene/GameScene.cpp.o: \
  /usr/include/SDL2/SDL_shape.h /usr/include/SDL2/SDL_system.h \
  /usr/include/SDL2/SDL_timer.h /usr/include/SDL2/SDL_version.h \
  /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h \
+ /home/yuto/sourse/STG_with_GPT/include/system/SceneManager.hpp \
+ /home/yuto/sourse/STG_with_GPT/include/scene/Scene.hpp \
+ /home/yuto/sourse/STG_with_GPT/include/scene/TitleScene.hpp \
+ /home/yuto/sourse/STG_with_GPT/include/scene/GameScene.hpp \
  /home/yuto/sourse/STG_with_GPT/include/object/Player.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
@@ -409,5 +412,4 @@ CMakeFiles/STG.dir/src/scene/GameScene.cpp.o: \
  /home/yuto/sourse/STG_with_GPT/include/pattern/StraightShotPattern.hpp \
  /home/yuto/sourse/STG_with_GPT/include/pattern/BulletPattern.hpp \
  /usr/include/c++/11/iostream /usr/include/SDL2/SDL_ttf.h \
- /usr/include/SDL2/SDL.h \
- /home/yuto/sourse/STG_with_GPT/include/system/ScoreManager.hpp
+ /usr/include/SDL2/SDL.h
