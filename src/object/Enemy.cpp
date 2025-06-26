@@ -1,11 +1,38 @@
 #include "object/Enemy.hpp"
 #include <cmath>
 
-Enemy::Enemy(float x_, float y_) : x(x_), y(y_) {}
+Enemy::Enemy(const EnemySpawnData &data)
+{
+    x = data.x;
+    y = data.y;
+    speed = data.speed;
+    angleDeg = data.angle;
+    hp = data.hp;
+    boss = data.isBoss;
+    type = data.type;
+    pattern = data.pattern;
+    params = data.params;
+}
 
 void Enemy::update(float playerX, float playerY)
 {
-    y += speed;
+    if (pattern == "straight")
+    {
+        float rad = angleDeg * M_PI / 180.0f;
+        x += std::cos(rad) * speed;
+        y += std::sin(rad) * speed;
+    }
+    else if (pattern == "sine")
+    {
+        float baseSpeed = speed;
+        float rad = angleDeg * M_PI / 180.0f;
+        float freq = params.value("frequency", 0.05f);
+        float amp = params.value("amplitude", 30.0f);
+        float offset = std::sin(y * freq) * amp;
+
+        x += offset * 0.1f;
+        y += std::sin(rad) * baseSpeed;
+    }
 
     if (fireCooldown <= 0)
     {
@@ -87,4 +114,39 @@ std::optional<EnemyBullet> Enemy::tryFire(float playerX, float playerY)
         fireCooldown--;
         return std::nullopt;
     }
+}
+
+void Enemy::onBombHit(float centerX, float centerY, float radius)
+{
+    float dx = getX() - centerX;
+    float dy = getY() - centerY;
+    float distSq = dx * dx + dy * dy;
+    float radiusSq = radius * radius;
+
+    if (distSq <= radiusSq)
+    {
+        if (isBoss())
+            takeDamage(1);
+        else
+            kill();
+    }
+}
+
+bool Enemy::isBoss() const
+{
+    return boss;
+}
+
+void Enemy::takeDamage(int dmg)
+{
+    hp -= dmg;
+    if (hp <= 0)
+    {
+        kill();
+    }
+}
+
+void Enemy::kill()
+{
+    dead = true;
 }

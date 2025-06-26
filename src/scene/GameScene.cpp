@@ -1,6 +1,10 @@
+// GameScene.cpp
 #include "scene/GameScene.hpp"
 #include <SDL2/SDL.h>
 #include "system/ScoreManager.hpp"
+#include "system/Stage.hpp"
+
+const float BOMB_RADIUS = 150.0f;
 
 void drawText(SDL_Renderer *renderer, TTF_Font *font, const std::string &text, int x, int y)
 {
@@ -35,34 +39,38 @@ void GameScene::update()
     player.handleInput(keyState);
     player.update();
 
+    // --- ボム効果処理（敵弾全削除＋敵への効果） ---
     if (player.isBombing())
     {
+        // 敵弾すべて削除
         enemyBullets.clear();
+        // 一定範囲内の敵にダメージ
+        float px = player.getX();
+        float py = player.getY();
+
+        // 敵にボムダメージ（onBombHit() が定義されている必要あり）
+        for (auto &enemy : enemies)
+        {
+            if (!enemy.isOffScreen())
+            {
+                enemy.onBombHit(px, py, BOMB_RADIUS);
+            }
+        }
     }
 
-    // 最初の1回だけステージを読み込む
+    // ステージデータ初期化（1回だけ）
     if (frameCounter == 0)
     {
         stage.loadFromFile("assets/stages/stage1.json");
     }
 
-    // 敵の出現管理
     const auto &spawns = stage.getSpawnList();
     while (nextSpawnIndex < spawns.size() && spawns[nextSpawnIndex].frame == frameCounter)
     {
-        enemies.emplace_back(spawns[nextSpawnIndex].x, spawns[nextSpawnIndex].y);
-        nextSpawnIndex++;
+        enemies.emplace_back(spawns[nextSpawnIndex]); // OK！
     }
 
     frameCounter++;
-
-    for (auto &e : enemies)
-    {
-        e.update(playerX(), playerY());
-    }
-
-    // 当たり判定：playerの弾 vs 敵
-    auto &bullets = player.getBullets();
 
     for (auto &e : enemies)
     {
@@ -76,12 +84,14 @@ void GameScene::update()
 
     for (auto &b : enemyBullets)
         b.update();
+
     enemyBullets.erase(std::remove_if(enemyBullets.begin(), enemyBullets.end(),
                                       [](const EnemyBullet &b)
                                       { return b.isOffScreen(); }),
                        enemyBullets.end());
 
-    // プレイヤー弾 vs 敵の当たり判定 + スコア加算
+    auto &bullets = player.getBullets();
+
     for (auto &bullet : bullets)
     {
         for (auto &enemy : enemies)
@@ -93,7 +103,7 @@ void GameScene::update()
             if (distSq < sumRadius * sumRadius)
             {
                 enemy.onHit();
-                bullet.setDead(); // 弾を無効化
+                bullet.setDead();
                 if (enemy.isDead())
                 {
                     ScoreManager::getInstance().addScore(1000);
@@ -102,9 +112,8 @@ void GameScene::update()
         }
     }
 
-    player.removeDeadBullets(); // 死んだ弾を削除（player 側に必要）
+    player.removeDeadBullets();
 
-    // 死亡・画面外の敵を削除
     enemies.erase(std::remove_if(enemies.begin(), enemies.end(),
                                  [](const Enemy &e)
                                  { return e.isDead() || e.isOffScreen(); }),
@@ -120,7 +129,7 @@ void GameScene::update()
             float sumRadius = b.getRadius() + player.getHitboxRadius();
             if (distSq < sumRadius * sumRadius)
             {
-                player.onHit(); // 残機を減らして無敵に
+                player.onHit();
                 break;
             }
         }
@@ -133,12 +142,35 @@ void GameScene::draw(SDL_Renderer *renderer)
         e.draw(renderer);
     for (auto &b : enemyBullets)
         b.draw(renderer);
+
     if (player.isBombing())
     {
-        SDL_SetRenderDrawColor(renderer, 0, 0, 255, 100);
+        // 画面全体薄い青 + ボム範囲のサークルを描画
+        // SDL_SetRenderDrawColor(renderer, 0, 0, 255, 60);
         SDL_Rect overlay = {0, 0, 640, 480};
         SDL_RenderFillRect(renderer, &overlay);
+
+        // 中心円を描画（半透明）
+        SDL_SetRenderDrawColor(renderer, 100, 100, 255, 180);
+        int centerX = static_cast<int>(player.getX());
+        int centerY = static_cast<int>(player.getY());
+        int radius = static_cast<int>(BOMB_RADIUS);
+
+        // 簡易的な filled circle（SDLには標準関数がないため Bresenham 法的な円近似）
+        for (int w = 0; w < radius * 2; w++)
+        {
+            for (int h = 0; h < radius * 2; h++)
+            {
+                int dx = radius - w;
+                int dy = radius - h;
+                if ((dx * dx + dy * dy) <= (radius * radius))
+                {
+                    SDL_RenderDrawPoint(renderer, centerX + dx, centerY + dy);
+                }
+            }
+        }
     }
+
     player.draw(renderer);
 
     if (player.isDead())
@@ -156,8 +188,7 @@ void GameScene::draw(SDL_Renderer *renderer)
     drawText(renderer, font,
              "SCORE: " + std::to_string(ScoreManager::getInstance().getScore()), 10, 30);
     drawText(renderer, font, "BOMBS: " + std::to_string(player.getBombs()), 10, 50);
-
-    // あとで "SCORE: 000000", "POWER: ★★" なども追加可能
+    drawText(renderer, font, "FRAME " + std::to_string(frameCounter), 420, 420);
 }
 
 GameScene::~GameScene()

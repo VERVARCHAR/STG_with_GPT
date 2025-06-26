@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/STG.dir/src/system/SceneManager.cpp.o.d"
   "CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o"
   "CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o.d"
+  "CMakeFiles/STG.dir/src/system/Stage.cpp.o"
+  "CMakeFiles/STG.dir/src/system/Stage.cpp.o.d"
   "CMakeFiles/STG.dir/src/system/StageLoader.cpp.o"
   "CMakeFiles/STG.dir/src/system/StageLoader.cpp.o.d"
   "STG"

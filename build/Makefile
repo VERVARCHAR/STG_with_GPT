@@ -369,6 +369,30 @@ src/system/ScoreManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/system/ScoreManager.cpp.s
 .PHONY : src/system/ScoreManager.cpp.s
 
+src/system/Stage.o: src/system/Stage.cpp.o
+.PHONY : src/system/Stage.o
+
+# target to build an object file
+src/system/Stage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/system/Stage.cpp.o
+.PHONY : src/system/Stage.cpp.o
+
+src/system/Stage.i: src/system/Stage.cpp.i
+.PHONY : src/system/Stage.i
+
+# target to preprocess a source file
+src/system/Stage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/system/Stage.cpp.i
+.PHONY : src/system/Stage.cpp.i
+
+src/system/Stage.s: src/system/Stage.cpp.s
+.PHONY : src/system/Stage.s
+
+# target to generate assembly for a file
+src/system/Stage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/src/system/Stage.cpp.s
+.PHONY : src/system/Stage.cpp.s
+
 src/system/StageLoader.o: src/system/StageLoader.cpp.o
 .PHONY : src/system/StageLoader.o
 
@@ -432,6 +456,9 @@ help:
 	@echo "... src/system/ScoreManager.o"
 	@echo "... src/system/ScoreManager.i"
 	@echo "... src/system/ScoreManager.s"
+	@echo "... src/system/Stage.o"
+	@echo "... src/system/Stage.i"
+	@echo "... src/system/Stage.s"
 	@echo "... src/system/StageLoader.o"
 	@echo "... src/system/StageLoader.i"
 	@echo "... src/system/StageLoader.s"

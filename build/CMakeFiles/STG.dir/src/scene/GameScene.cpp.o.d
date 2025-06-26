@@ -256,11 +256,7 @@ CMakeFiles/STG.dir/src/scene/GameScene.cpp.o: \
  /home/yuto/sourse/STG_with_GPT/include/object/Bullet.hpp \
  /home/yuto/sourse/STG_with_GPT/include/object/Enemy.hpp \
  /home/yuto/sourse/STG_with_GPT/include/object/EnemyBullet.hpp \
- /usr/include/c++/11/optional /usr/include/c++/11/exception \
- /usr/include/c++/11/bits/exception_ptr.h \
- /usr/include/c++/11/bits/cxxabi_init_exception.h \
- /usr/include/c++/11/bits/nested_exception.h \
- /home/yuto/sourse/STG_with_GPT/include/system/StageLoader.hpp \
+ /home/yuto/sourse/STG_with_GPT/include/system/Stage.hpp \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/bits/postypes.h /usr/include/c++/11/cwchar \
@@ -295,6 +291,121 @@ CMakeFiles/STG.dir/src/scene/GameScene.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
- /usr/include/c++/11/bits/basic_string.tcc /usr/include/SDL2/SDL_ttf.h \
- /usr/include/SDL2/SDL.h \
+ /usr/include/c++/11/bits/basic_string.tcc \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/json.hpp \
+ /usr/include/c++/11/cstddef /usr/include/c++/11/iterator \
+ /usr/include/c++/11/bits/stream_iterator.h \
+ /usr/include/c++/11/bits/streambuf_iterator.h \
+ /usr/include/c++/11/streambuf /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/c++/11/bits/locale_classes.h \
+ /usr/include/c++/11/bits/locale_classes.tcc \
+ /usr/include/c++/11/system_error \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+ /usr/include/c++/11/stdexcept /usr/include/c++/11/exception \
+ /usr/include/c++/11/bits/exception_ptr.h \
+ /usr/include/c++/11/bits/cxxabi_init_exception.h \
+ /usr/include/c++/11/bits/nested_exception.h \
+ /usr/include/c++/11/bits/streambuf.tcc /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
+ /usr/include/c++/11/bits/unique_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/ext/concurrence.h \
+ /usr/include/c++/11/bits/shared_ptr_atomic.h \
+ /usr/include/c++/11/bits/atomic_base.h \
+ /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/11/backward/auto_ptr.h \
+ /usr/include/c++/11/pstl/glue_memory_defs.h \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/adl_serializer.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/abi_macros.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/conversions/from_json.hpp \
+ /usr/include/c++/11/forward_list /usr/include/c++/11/bits/forward_list.h \
+ /usr/include/c++/11/bits/forward_list.tcc /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/valarray \
+ /usr/include/c++/11/bits/valarray_array.h \
+ /usr/include/c++/11/bits/valarray_array.tcc \
+ /usr/include/c++/11/bits/valarray_before.h \
+ /usr/include/c++/11/bits/slice_array.h \
+ /usr/include/c++/11/bits/valarray_after.h \
+ /usr/include/c++/11/bits/gslice.h \
+ /usr/include/c++/11/bits/gslice_array.h \
+ /usr/include/c++/11/bits/mask_array.h \
+ /usr/include/c++/11/bits/indirect_array.h \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/exceptions.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/value_t.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/macro_scope.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/meta/detected.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/meta/void_t.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/thirdparty/hedley/hedley.hpp \
+ /usr/include/c++/11/version /usr/include/c++/11/cassert \
+ /usr/include/assert.h \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/string_escape.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/input/position_t.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/meta/cpp_future.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/meta/type_traits.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/iterators/iterator_traits.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/meta/call_std/begin.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/meta/call_std/end.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/json_fwd.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/string_concat.hpp \
+ /usr/include/c++/11/cstring \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/meta/identity_tag.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/meta/std_fs.hpp \
+ /usr/include/c++/11/filesystem /usr/include/c++/11/bits/fs_fwd.h \
+ /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
+ /usr/include/c++/11/bits/fs_path.h /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+ /usr/include/c++/11/bits/locale_facets.tcc \
+ /usr/include/c++/11/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h /usr/include/c++/11/iomanip \
+ /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/istream /usr/include/c++/11/ios \
+ /usr/include/c++/11/bits/basic_ios.h \
+ /usr/include/c++/11/bits/basic_ios.tcc /usr/include/c++/11/ostream \
+ /usr/include/c++/11/bits/ostream.tcc \
+ /usr/include/c++/11/bits/istream.tcc \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/codecvt \
+ /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
+ /usr/include/c++/11/optional \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/conversions/to_json.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/iterators/iteration_proxy.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/string_utils.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/byte_container_with_subtype.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/hash.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/input/binary_reader.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/input/input_adapters.hpp \
+ /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
+ /usr/include/c++/11/pstl/glue_numeric_defs.h \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/input/json_sax.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/input/lexer.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/meta/is_sax.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/input/parser.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/iterators/internal_iterator.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/iterators/primitive_iterator.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/iterators/iter_impl.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/json_custom_base_class.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/json_pointer.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/json_ref.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/output/binary_writer.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/output/output_adapters.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/output/serializer.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/conversions/to_chars.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/ordered_map.hpp \
+ /usr/include/c++/11/any \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/detail/macro_unscope.hpp \
+ /home/yuto/sourse/STG_with_GPT/third_party/json/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /home/yuto/sourse/STG_with_GPT/include/system/StageLoader.hpp \
+ /usr/include/SDL2/SDL_ttf.h /usr/include/SDL2/SDL.h \
  /home/yuto/sourse/STG_with_GPT/include/system/ScoreManager.hpp

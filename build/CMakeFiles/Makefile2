@@ -81,12 +81,12 @@ clean: CMakeFiles/STG.dir/clean
 CMakeFiles/STG.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STG.dir/build.make CMakeFiles/STG.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target STG"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yuto/sourse/STG_with_GPT/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target STG"
 .PHONY : CMakeFiles/STG.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/STG.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuto/sourse/STG_with_GPT/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuto/sourse/STG_with_GPT/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/STG.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuto/sourse/STG_with_GPT/build/CMakeFiles 0
 .PHONY : CMakeFiles/STG.dir/rule

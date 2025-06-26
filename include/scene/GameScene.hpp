@@ -6,6 +6,7 @@
 
 #include "system/StageLoader.hpp"
 #include "object/EnemyBullet.hpp"
+#include "system/Stage.hpp" // ← ヘッダ冒頭に必要
 
 #include <SDL2/SDL_ttf.h>
 
@@ -24,9 +25,12 @@ public:
     std::vector<EnemyBullet> enemyBullets;
 
 private:
+    TTF_Font *font = nullptr;
     Player player;
     std::vector<Enemy> enemies;
-    int enemySpawnTimer = 0;
+    std::vector<EnemyBullet> enemyBullets;
+    int frameCounter = 0;
+    int nextSpawnIndex = 0;
 
-    TTF_Font *font = nullptr;
+    Stage stage; // ← これを追加！！！
 };
