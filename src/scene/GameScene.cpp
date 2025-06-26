@@ -57,7 +57,7 @@ void GameScene::update()
     }
 
     // 当たり判定：playerの弾 vs 敵
-    const auto &bullets = player.getBullets();
+    auto &bullets = player.getBullets();
 
     for (auto &e : enemies)
     {

@@ -11,6 +11,7 @@ public:
     void handleInput(const Uint8 *keyState);
     void update();
     void draw(SDL_Renderer *renderer);
+    std::vector<Bullet> &getBullets() { return bullets; }
     const std::vector<Bullet> &getBullets() const { return bullets; }
     float getX() const { return x; }
     float getY() const { return y; }
