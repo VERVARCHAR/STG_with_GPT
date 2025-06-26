@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/yuto/sourse/STG_with_GPT/src/scene/TitleScene.cpp" "CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o" "gcc" "CMakeFiles/STG.dir/src/scene/TitleScene.cpp.o.d"
   "/home/yuto/sourse/STG_with_GPT/src/system/Application.cpp" "CMakeFiles/STG.dir/src/system/Application.cpp.o" "gcc" "CMakeFiles/STG.dir/src/system/Application.cpp.o.d"
   "/home/yuto/sourse/STG_with_GPT/src/system/SceneManager.cpp" "CMakeFiles/STG.dir/src/system/SceneManager.cpp.o" "gcc" "CMakeFiles/STG.dir/src/system/SceneManager.cpp.o.d"
+  "/home/yuto/sourse/STG_with_GPT/src/system/ScoreManager.cpp" "CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o" "gcc" "CMakeFiles/STG.dir/src/system/ScoreManager.cpp.o.d"
   "/home/yuto/sourse/STG_with_GPT/src/system/StageLoader.cpp" "CMakeFiles/STG.dir/src/system/StageLoader.cpp.o" "gcc" "CMakeFiles/STG.dir/src/system/StageLoader.cpp.o.d"
   )
 

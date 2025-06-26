@@ -13,10 +13,13 @@ public:
     float getX() const { return x; }
     float getY() const { return y; }
     float getRadius() const { return radius; }
+    void setDead();
+    bool isDead() const;
 
 private:
     float x, y;
     float vx, vy;
     float speed = 3.0f;
     float radius = 4.0f;
+    bool dead = false;
 };
