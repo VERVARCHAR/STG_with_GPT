@@ -33,6 +33,8 @@ public:
 
     void removeDeadBullets();
 
+    void removeDeadBullets();
+
 private:
     float x,
         y;

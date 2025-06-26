@@ -296,4 +296,5 @@ CMakeFiles/STG.dir/src/scene/GameScene.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc /usr/include/SDL2/SDL_ttf.h \
- /usr/include/SDL2/SDL.h
+ /usr/include/SDL2/SDL.h \
+ /home/yuto/sourse/STG_with_GPT/include/system/ScoreManager.hpp
