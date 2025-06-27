@@ -15,6 +15,22 @@
                 "shoot_interval": 90,
                 "bullet_speed": 3.0
             }
+        },
+        {
+            "frame": 100,
+            "x": 350,
+            "y": -50,
+            "type": "fairy",
+            "is_boss": false,
+            "pattern": "sine",
+            "speed": 1.5,
+            "angle": 90,
+            "hp": 5,
+            "params": {
+                "bullet_pattern": "straight",
+                "shoot_interval": 90,
+                "bullet_speed": 3.0
+            }
         }
     ]
 }

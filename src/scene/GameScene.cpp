@@ -188,11 +188,64 @@ void GameScene::draw(SDL_Renderer *renderer)
                  200, 260);
     }
 
-    drawText(renderer, font, "LIVES: " + std::to_string(player.getLives()), 10, 10);
-    drawText(renderer, font,
-             "SCORE: " + std::to_string(ScoreManager::getInstance().getScore()), 10, 30);
-    drawText(renderer, font, "BOMBS: " + std::to_string(player.getBombs()), 10, 50);
-    drawText(renderer, font, "FRAME " + std::to_string(frameCounter), 420, 420);
+    // drawText(renderer, font, "LIVES: " + std::to_string(player.getLives()), 10, 10);
+    // drawText(renderer, font,
+    //          "SCORE: " + std::to_string(ScoreManager::getInstance().getScore()), 10, 30);
+    // drawText(renderer, font, "BOMBS: " + std::to_string(player.getBombs()), 10, 50);
+    // drawText(renderer, font, "FRAME " + std::to_string(frameCounter), 420, 420);
+
+    // 右側 UI の描画
+    drawUI(renderer);
+}
+
+void GameScene::drawUI(SDL_Renderer *renderer)
+{
+    // 背景
+    SDL_SetRenderDrawColor(renderer, 32, 32, 32, 255);
+    SDL_Rect uiRect = {640, 0, 160, 480};
+    SDL_RenderFillRect(renderer, &uiRect);
+
+    int x = 650;
+    int y = 20;
+    int lineHeight = 24;
+
+    auto drawLabel = [&](const std::string &label, const std::string &value)
+    {
+        drawText(renderer, font, label, x, y);
+        drawText(renderer, font, value, x, y + 14);
+        y += lineHeight * 2;
+    };
+
+    // スコア
+    drawLabel("SCORE", std::to_string(ScoreManager::getInstance().getScore()));
+
+    // 仮のハイスコア（固定値）
+    drawLabel("HI SCORE", "99999990");
+
+    // ライフ
+    drawLabel("LIVES", std::string(player.getLives(), '★'));
+
+    // ボム
+    drawLabel("BOMBS", std::string(player.getBombs(), '◎'));
+
+    // 拡張用スペース（POWER, GRAZE など今後）
+    drawLabel("POWER", "★★");
+    drawLabel("GRAZE", "123");
+
+    // FPS（簡易計測：60固定などでもOK）
+    static Uint32 lastTime = SDL_GetTicks();
+    static float fps = 60.0f;
+
+    Uint32 now = SDL_GetTicks();
+    float deltaTime = now - lastTime;
+    if (deltaTime > 0)
+        fps = 1000.0f / deltaTime;
+    lastTime = now;
+
+    drawLabel("FPS", std::to_string(static_cast<int>(fps)));
+
+    // タイトル or ステージ名
+    drawText(renderer, font, "STAGE 1", x, 440);
 }
 
 GameScene::~GameScene()

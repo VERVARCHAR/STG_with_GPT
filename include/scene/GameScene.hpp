@@ -18,6 +18,8 @@ public:
     ~GameScene(); // ← デストラクタ追加
     void update() override;
     void draw(SDL_Renderer *renderer) override;
+    void drawUI(SDL_Renderer *renderer);
+
     int frameCounter = 0;
     // Stage stage;
     size_t nextSpawnIndex = 0;

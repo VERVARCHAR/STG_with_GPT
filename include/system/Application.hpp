@@ -13,6 +13,6 @@ public:
 private:
     SDL_Window *window = nullptr;
     SDL_Renderer *renderer = nullptr;
-    const int windowWidth = 640;
+    const int windowWidth = 800;
     const int windowHeight = 480;
 };
